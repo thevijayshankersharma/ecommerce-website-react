@@ -1,0 +1,36 @@
+{
+  "address": [
+    {
+      "id": "1",
+      "username": "Iron Man ",
+      "email": "ironman@gmail.com",
+      "mobile": "1001",
+      "area": "New York, USA",
+      "pincode": "102"
+    },
+    {
+      "id": "2",
+      "username": "Captain America",
+      "email": "steverogers@gmail.com",
+      "mobile": "1002",
+      "area": "Brooklyn, New York, USA",
+      "pincode": "102"
+    },
+    {
+      "id": "3",
+      "username": "Thor",
+      "email": "thor@asgard.com",
+      "mobile": "1003",
+      "area": "Asgard",
+      "pincode": "103"
+    },
+    {
+      "id": "4",
+      "username": "Spider-Man",
+      "email": "peterparker@gmail.com",
+      "mobile": "1004",
+      "area": "Queens, New York, USA",
+      "pincode": "104"
+    }
+  ]
+}
