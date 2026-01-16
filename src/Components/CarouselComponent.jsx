@@ -19,32 +19,36 @@ const CarouselComponent = () => {
   ];
 
   return (
-    <div className="-mt-4 mb-12">
-      <Carousel 
-        autoPlay 
-        infiniteLoop 
-        showThumbs={false} 
-        showStatus={false} 
-        interval={4000} 
-        transitionTime={800}
+    <div className="mt-20">
+      <Carousel
+        autoPlay
+        infiniteLoop
+        showThumbs={false}
+        showStatus={false}
+        interval={5000}
+        transitionTime={1000}
+        showArrows={false}
       >
         {slides.map((slide, i) => (
-          <div key={i} className="relative h-64 md:h-96 overflow-hidden">
-            <img 
-              src={slide.img} 
-              alt={slide.title} 
-              className="w-full h-full object-cover brightness-75" 
+          <div key={i} className="relative h-[500px] md:h-[600px] w-full">
+            <img
+              src={slide.img}
+              alt={slide.title}
+              className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
-              <h2 className="text-4xl md:text-6xl font-bold mb-4 drop-shadow-2xl">
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent flex flex-col justify-center text-left text-white px-10 md:px-20">
+              <h2 className="text-5xl md:text-7xl font-bold font-heading mb-4 drop-shadow-2xl animate-fade-in-up">
                 {slide.title}
               </h2>
-              <p className="text-xl md:text-3xl mb-8 drop-shadow-lg">
+              <p className="text-xl md:text-3xl font-light mb-8 max-w-2xl drop-shadow-lg">
                 {slide.subtitle}
               </p>
-              <button className="bg-white text-red-600 px-8 py-4 rounded-full font-bold text-lg hover:scale-110 transition shadow-2xl">
-                {slide.btnText}
-              </button>
+              <div>
+                <button className="bg-red-500 text-white px-10 py-4 rounded-full font-bold text-lg shadow-lg hover:bg-red-600 hover:shadow-red-500/40 transition-all transform hover:-translate-y-1 active:scale-95">
+                  {slide.btnText}
+                </button>
+              </div>
             </div>
           </div>
         ))}
